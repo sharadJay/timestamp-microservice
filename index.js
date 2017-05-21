@@ -17,7 +17,7 @@ app.get("/:time", (request, response)=> {
     } else {
         response.send({
             "unix": request.params.time,
-            "naturalDate": time.unix(parseInt(request.params.time)).format("MMMM D YYYY")
+            "naturalDate": time(parseInt(request.params.time)).format("MMMM D YYYY")
         })
     }
 });
